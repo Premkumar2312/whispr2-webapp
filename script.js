@@ -1,4 +1,4 @@
-const API_URL = "https://fundamental-janine-presonal-projects-bc58dd75.koyeb.app";
+const API_URL = "https://whispr2-webapp-backend.onrender.com";
 
 const postForm = document.getElementById("postForm");
 const messageInput = document.getElementById("message");
