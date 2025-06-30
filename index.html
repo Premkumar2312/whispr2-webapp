@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whispr</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating Trending Tab -->
+  <div id="trendingTab" onclick="showTrending()">🔥</div>
+
+  <!-- Floating Your Posts Button -->
+  <div id="yourPostsButton" onclick="toggleYourPosts()">👤</div>
+  <div id="yourPostsBar" style="display: none;">
+    <div class="your-title">Your Posts</div>
+    <div id="yourPostsList"></div>
+  </div>
+
+  <!-- Add Post Button -->
+  <div id="formToggle" class="add-post-btn">+</div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Whispr</h1>
+    <p class="tagline">Speak freely. Stay anonymous.</p>
+
+    <!-- Post Form -->
+    <form id="postForm" style="display: none;">
+      <textarea id="message" placeholder="Type your whisper..." required></textarea>
+      <button type="submit">Post</button>
+    </form>
+
+    <div id="postsContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
