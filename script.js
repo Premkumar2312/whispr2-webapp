@@ -1,4 +1,4 @@
-const API_URL = "https://whispr2-webapp-backend.vercel.app";
+const API_URL = "https://original-tiena-presonal-projects-c5de53a2.koyeb.app";
 
 const postForm = document.getElementById("postForm");
 const messageInput = document.getElementById("message");
