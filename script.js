@@ -155,7 +155,9 @@ function toggleTheme() {
 }
 
 window.onload = () => {
-  loadPosts();
+  loadPosts(); // Load posts first
+
+  // Then apply theme
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     document.body.classList.add("light");
@@ -164,6 +166,3 @@ window.onload = () => {
     document.getElementById("themeToggle").textContent = "🌙";
   }
 };
-
-// Load posts on start
-window.onload = loadPosts;
