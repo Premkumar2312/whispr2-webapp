@@ -147,5 +147,23 @@ function shuffleArray(array) {
   }
 }
 
+function toggleTheme() {
+  const body = document.body;
+  const isLight = body.classList.toggle("light");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  document.getElementById("themeToggle").textContent = isLight ? "🌞" : "🌙";
+}
+
+window.onload = () => {
+  loadPosts();
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light");
+    document.getElementById("themeToggle").textContent = "🌞";
+  } else {
+    document.getElementById("themeToggle").textContent = "🌙";
+  }
+};
+
 // Load posts on start
 window.onload = loadPosts;
