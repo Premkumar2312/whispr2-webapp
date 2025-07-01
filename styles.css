@@ -4,6 +4,7 @@ body {
   color: #eee;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -62,7 +63,6 @@ button:hover {
   padding: 15px;
   border-radius: 10px;
   margin-top: 20px;
-  position: relative;
 }
 
 .post p {
@@ -82,7 +82,7 @@ button:hover {
   font-size: 1.2rem;
 }
 
-/* Add Post Button */
+/* Floating Buttons */
 .add-post-btn {
   position: fixed;
   bottom: 20px;
@@ -102,7 +102,6 @@ button:hover {
   box-shadow: 0 0 12px rgba(255, 107, 107, 0.5);
 }
 
-/* Your Posts Button */
 #yourPostsButton {
   position: fixed;
   bottom: 20px;
@@ -121,7 +120,6 @@ button:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 
-/* Trending Button */
 #trendingTab {
   position: fixed;
   bottom: 20px;
@@ -140,7 +138,26 @@ button:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 
-/* Your Posts Panel */
+/* Theme Toggle (Top Left) */
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #444;
+  color: white;
+  font-size: 1.3rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Your Posts */
 #yourPostsBar {
   position: fixed;
   bottom: 80px;
@@ -182,4 +199,36 @@ button:hover {
   color: #999;
   font-size: 0.7rem;
   margin-top: 5px;
+}
+
+/* Light Theme Overrides */
+body.light {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light .container,
+body.light .post,
+body.light .your-post,
+body.light #yourPostsBar {
+  background: #fff;
+  color: #222;
+}
+
+body.light textarea {
+  background: #eee;
+  color: #000;
+}
+
+body.light button {
+  background-color: #0077ff;
+}
+
+body.light button:hover {
+  background-color: #3399ff;
+}
+
+body.light #themeToggle {
+  background: #ddd;
+  color: #333;
 }
