@@ -8,25 +8,26 @@
 </head>
 <body>
 
-  <!-- Floating Trending Tab -->
+  <!-- Theme Toggle Switch (Top Left) -->
+  <div id="themeToggle" onclick="toggleTheme()">🌙</div>
+
+  <!-- Trending Tab -->
   <div id="trendingTab" onclick="showTrending()">🔥</div>
 
-  <!-- Floating Your Posts Button -->
+  <!-- Your Posts -->
   <div id="yourPostsButton" onclick="toggleYourPosts()">👤</div>
   <div id="yourPostsBar" style="display: none;">
     <div class="your-title">Your Posts</div>
     <div id="yourPostsList"></div>
   </div>
 
-  <!-- Add Post Button -->
+  <!-- Add Post -->
   <div id="formToggle" class="add-post-btn">+</div>
 
-  <!-- Main Content -->
   <div class="container">
     <h1>Whispr</h1>
     <p class="tagline">Speak freely. Stay anonymous.</p>
 
-    <!-- Post Form -->
     <form id="postForm" style="display: none;">
       <textarea id="message" placeholder="Type your whisper..." required></textarea>
       <button type="submit">Post</button>
